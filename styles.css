@@ -1,0 +1,86 @@
+/*Uberaem vnutrennie i vnehnie otstupy u vsex elementov po umolchaniy */
+*{
+    margin: 0;
+    padding :0;
+    box-sizing: border-box; 
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva,Verdana,sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px; /*Prostoy sposob dobavit otstup mezdu elementami*/
+}
+#taskInput {
+    flex: 1; /*pole vvoda zaimet vse dostupnoe mesto*/
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#addTaskBtn {
+    padding: 10px 20px;
+    background-color: #5cb85c;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+#addTaskBtn:hover {
+    background-color: #4cae4c; /*Temnee pri navedenii*/
+}
+#taskList {
+    list-style: none; /*Uberaem standartnye markery spiska*/
+}   
+.task-item {
+    display: flex;
+    justify-content: space-between; /*rastalkivaet dochernie elementy po krayam konteinera.
+    Text zadachi sleva, knopka udaleniya sprava*/
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.taskText {
+    flex: 1;
+    margin-left: 10px;  
+
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #888;    
+}
+
+.complete-checkbox {
+    cursor: pointer;
+}
